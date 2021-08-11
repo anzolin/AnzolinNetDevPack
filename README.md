@@ -26,7 +26,7 @@ See [my NuGet Profile](https://www.nuget.org/profiles/anzolin) to find more inte
 
 Get Started
 -----------
-.NET DevPack can be installed using the Nuget package manager or the `dotnet` CLI.
+This nuget package can be installed using the Nuget package manager or the `dotnet` CLI.
 
 ```powershell
 dotnet add package AnzolinNetDevPack
