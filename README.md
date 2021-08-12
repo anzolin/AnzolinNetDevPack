@@ -24,8 +24,11 @@
     <li><a href="#what-is-the-anzolinnetdevpack">What is the AnzolinNetDevPack?</a></li>
     <li><a href="#get-started">Get Started</a></li>
     <li><a href="#how-it-works">How it works</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#contacts">Contacts</a></li>
+    <li><a href="#examples">Examples</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#give-a-star">Give a Star!</a></li>
+    <li><a href="#about-the-author">About the author</a></li>
+    <li><a href="#donate">Donate</a></li>
   </ol>
 </details>
 
@@ -82,31 +85,27 @@ dotnet add package AnzolinNetDevPack
 | **EmailValidator** | `IsValidEmail` | **string** email | Valida se é um e-mail. |
 
 
-Examples
--------
+## Examples
 
 The sample application that uses the features will be available soon. In the meantime, explore the code to understand what it covers. 
 
 
-License
--------
+## License
 
 This NuGet Package is [MIT Licensed](https://github.com/anzolin/AnzolinNetDevPack/blob/master/LICENSE).
 
 
-Give a Star! :star:
-----------------------
-If you liked the project or if NetDevPack helped you, please give a star ;)
+## Give a Star!
+
+:star: If you liked the project or if NetDevPack helped you, please give a star ;)
 
   
-About the author
-----------------
+## About the author
 
 Hello everyone, my name is Diego Anzolin Ferreira. I'm a .NET developer from Brazil. I hope you will enjoy this NuGet Package as much as I enjoy developing it. If you have any problems, you can post a [GitHub issue](https://github.com/anzolin/AnzolinNetDevPack/issues). You can reach me out at diego@anzolin.com.br.
 
 
-Donate
-------
+## Donate
   
 Want to help me keep creating open source projects, make a donation:
 
