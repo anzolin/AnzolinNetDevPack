@@ -50,7 +50,7 @@ How it works
 | **EnumHelper** | `GetText` | **Type** aEnumType, **int** aKey |  |
 | **EnumHelper** | `GetText` | **Type** aEnumType, **string** vEnumName |  |
 | **EnumHelper** | `GetValueDisplayDictionary` | **Type** aEnumType |  |
-| **EnumHelper** | `GetSelectListItems` | **Type** aEnumType, **int?** value = null |  |
+| **EnumHelper** | `GetSelectListItems` | **Type** aEnumType, **int?** value |  |
 | **SearchHelper** | `ApplyPaging` | **IEnumerable** enumerable, **int** count, **int** pageSize, **int?** page | Aplica uma paginação para o IEnumerable TModel. |
 | **StringHelper** | `RemoveMask` | **string** value | Remove todos caracteres, deixando apenas letras e números. |
 | **StringHelper** | `AddMask` | **MaskType** type, **string** value | Aplica a máscara escolhida. |
