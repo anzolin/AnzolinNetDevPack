@@ -15,17 +15,32 @@
 
 ---
 
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>
+    <h2 style="display: inline-block">Table of Contents</h2>
+  </summary>
+  <ol>
+    <li><a href="#what-is-the-anzolinnetdevpack">What is the AnzolinNetDevPack?</a></li>
+    <li><a href="#get-started">Get Started</a></li>
+    <li><a href="#how-it-works">How it works</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#contacts">Contacts</a></li>
+  </ol>
+</details>
 
-What is the AnzolinNetDevPack?
-=====================
+---
+
+
+# What is the AnzolinNetDevPack?
 
 A smart set of common classes and implementations to improve your development productivity bundled in NuGet Packages.
 
 See [my NuGet Profile](https://www.nuget.org/profiles/anzolin) to find more interesting packages.
 
 
-Get Started
------------
+## Get Started
+
 This nuget package can be installed using the Nuget package manager or the `dotnet` CLI.
 
 ```powershell
@@ -38,8 +53,7 @@ dotnet add package AnzolinNetDevPack
 | `AnzolinNetDevPack` | [![NuGet](https://img.shields.io/nuget/v/AnzolinNetDevPack)](https://www.nuget.org/packages/AnzolinNetDevPack/) | [![NuGet](https://img.shields.io/nuget/dt/AnzolinNetDevPack)](https://www.nuget.org/packages/AnzolinNetDevPack/) |
 
 
-How it works
-------------
+## How it works
 
 | Class | Function | Parameters | Summary `pt-br` |
 |---|---|---|---|
