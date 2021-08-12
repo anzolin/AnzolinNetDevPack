@@ -97,7 +97,7 @@ This NuGet Package is [MIT Licensed](https://github.com/anzolin/AnzolinNetDevPac
 
 ## Give a Star!
 
-:star: If you liked the project or if NetDevPack helped you, please give a star ;)
+:star: If you liked the project or if it helped you, please give a star ;)
 
   
 ## About the author
