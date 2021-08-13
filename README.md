@@ -68,6 +68,9 @@ dotnet add package AnzolinNetDevPack
 | **EnumHelper** | `GetText` | **Type** aEnumType, **string** vEnumName |  |
 | **EnumHelper** | `GetValueDisplayDictionary` | **Type** aEnumType |  |
 | **EnumHelper** | `GetSelectListItems` | **Type** aEnumType, **int?** value |  |
+| **HangfireForMySqlHelper** | `Enqueue` | **Expression** methodCall |  |
+| **HangfireForMySqlHelper** | `GetJobDetails` | **MySqlStorage** storage, **string** jobId |  |
+| **HangfireForMySqlHelper** | `GetJobResult` | **MySqlStorage** storage, **string** jobId |  |
 | **SearchHelper** | `ApplyPaging` | **IEnumerable** enumerable, **int** count, **int** pageSize, **int?** page | Aplica uma paginação para o IEnumerable TModel. |
 | **StringHelper** | `RemoveMask` | **string** value | Remove todos caracteres, deixando apenas letras e números. |
 | **StringHelper** | `AddMask` | **MaskType** type, **string** value | Aplica a máscara escolhida. |
