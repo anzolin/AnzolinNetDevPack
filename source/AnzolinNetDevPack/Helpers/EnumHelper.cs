@@ -9,7 +9,7 @@ namespace AnzolinNetDevPack.Helpers
     public static class EnumHelper
     {
         /// <summary>
-        /// 
+        /// Retorna o valor inteiro do objeto enum informado.
         /// </summary>
         /// <param name="aEnum"></param>
         /// <returns></returns>
@@ -19,7 +19,7 @@ namespace AnzolinNetDevPack.Helpers
         }
 
         /// <summary>
-        /// 
+        /// Retorna o valor texto do objeto enum informado.
         /// </summary>
         /// <param name="aEnum"></param>
         /// <returns></returns>
@@ -36,7 +36,7 @@ namespace AnzolinNetDevPack.Helpers
         }
 
         /// <summary>
-        /// 
+        /// Retorna o valor texto do objeto enum informado.
         /// </summary>
         /// <param name="aEnumType"></param>
         /// <param name="aKey"></param>
@@ -51,6 +51,12 @@ namespace AnzolinNetDevPack.Helpers
             return GetText(aEnumType, vEnumName);
         }
 
+        /// <summary>
+        /// Retorna o valor texto do objeto enum informado.
+        /// </summary>
+        /// <param name="aEnumType"></param>
+        /// <param name="vEnumName"></param>
+        /// <returns></returns>
         public static string GetText(Type aEnumType, string vEnumName)
         {
             var vMemberInfo = aEnumType.GetMember(vEnumName);
@@ -60,7 +66,7 @@ namespace AnzolinNetDevPack.Helpers
         }
 
         /// <summary>
-        /// 
+        /// Retorna um dicionário do tipo int, string do objeto enum informado.
         /// </summary>
         /// <param name="aEnumType"></param>
         /// <returns></returns>
@@ -75,7 +81,7 @@ namespace AnzolinNetDevPack.Helpers
         }
 
         /// <summary>
-        /// 
+        /// Retorna uma lista do tipo SelectListItem do objeto enum informado. Para ser utilizado em lookups.
         /// </summary>
         /// <param name="aEnumType"></param>
         /// <param name="value"></param>
