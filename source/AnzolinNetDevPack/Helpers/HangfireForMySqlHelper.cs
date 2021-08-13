@@ -53,7 +53,6 @@ namespace AnzolinNetDevPack.Helpers
 
             var api = JobStorage.Current.GetMonitoringApi();
             var jobResult = api.JobDetails(jobId);
-            var jobSucceeded = api.SucceededJobs(0, int.MaxValue).FirstOrDefault(q => q.Key == jobId).Value;
 
             return jobResult;
         }

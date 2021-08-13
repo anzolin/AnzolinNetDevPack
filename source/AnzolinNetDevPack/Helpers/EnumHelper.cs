@@ -25,7 +25,7 @@ namespace AnzolinNetDevPack.Helpers
         /// <returns></returns>
         public static string GetText(object aEnum)
         {
-            if (((object)aEnum) == null) throw new ArgumentNullException("aEnum");
+            if ((object)aEnum == null) throw new ArgumentNullException("aEnum");
 
             var vEnumType = aEnum.GetType();
 

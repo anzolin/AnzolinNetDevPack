@@ -17,7 +17,7 @@ namespace AnzolinNetDevPack.Helpers
 
             try
             {
-                int[] timeArr = GetTimeAsArray(time);
+                var timeArr = GetTimeAsArray(time);
 
                 if (timeArr != null && timeArr.Length != 3)
                     return 0;
@@ -66,15 +66,15 @@ namespace AnzolinNetDevPack.Helpers
         {
             try
             {
-                int[] timeArr = GetTimeAsArray(time);
+                var timeArr = GetTimeAsArray(time);
 
                 if (timeArr != null && timeArr.Length != 3)
                     return null;
 
                 if (timeArr.Length == 3)
                     return new DateTime(DateTime.MinValue.Year, DateTime.MinValue.Month, DateTime.MinValue.Day, timeArr[0], timeArr[1], timeArr[2]);
-                else
-                    return null;
+                
+                return null;
             }
             catch
             {
@@ -92,7 +92,7 @@ namespace AnzolinNetDevPack.Helpers
         {
             try
             {
-                TimeSpan tsTime = new TimeSpan();
+                var tsTime = new TimeSpan();
 
                 switch (fromType)
                 {
@@ -117,7 +117,7 @@ namespace AnzolinNetDevPack.Helpers
                         break;
                 }
 
-                int totalhours = (int)tsTime.TotalHours;
+                var totalhours = (int)tsTime.TotalHours;
 
                 return totalhours.ToString().PadLeft(2, '0') + ":" + tsTime.Minutes.ToString().PadLeft(2, '0') + ":" + tsTime.Seconds.ToString().PadLeft(2, '0');
             }
@@ -137,7 +137,7 @@ namespace AnzolinNetDevPack.Helpers
         {
             try
             {
-                return time != null ? time.Split(':').Select(x => Int32.Parse(x)).ToArray() : null;
+                return time?.Split(':').Select(x => int.Parse(x)).ToArray();
             }
             catch
             {

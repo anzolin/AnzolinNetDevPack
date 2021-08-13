@@ -29,24 +29,25 @@ namespace AnzolinNetDevPack.Helpers
         /// <returns>Retorna o valor com a máscara escolhida aplicada.</returns>
         public static string AddMask(MaskType type, string value)
         {
-            if (!string.IsNullOrEmpty(value))
-                switch (type)
-                {
-                    case MaskType.CPF:
-                        if (value.Length == 11)
-                            value = string.Format("{0}.{1}.{2}-{3}", value.Substring(0, 3), value.Substring(3, 3), value.Substring(6, 3), value.Substring(9, 2));
-                        break;
+            if (string.IsNullOrEmpty(value)) return value;
+            
+            switch (type)
+            {
+                case MaskType.CPF:
+                    if (value.Length == 11)
+                        value = $"{value.Substring(0, 3)}.{value.Substring(3, 3)}.{value.Substring(6, 3)}-{value.Substring(9, 2)}";
+                    break;
 
-                    case MaskType.CNPJ:
-                        if (value.Length == 14)
-                            value = string.Format("{0}.{1}.{2}/{3}-{4}", value.Substring(0, 2), value.Substring(2, 3), value.Substring(5, 3), value.Substring(8, 4), value.Substring(12, 2));
-                        break;
+                case MaskType.CNPJ:
+                    if (value.Length == 14)
+                        value = $"{value.Substring(0, 2)}.{value.Substring(2, 3)}.{value.Substring(5, 3)}/{value.Substring(8, 4)}-{value.Substring(12, 2)}";
+                    break;
 
-                    case MaskType.CEP:
-                        if (value.Length == 8)
-                            value = string.Format("{0}-{1}", value.Substring(0, 5), value.Substring(5, 3));
-                        break;
-                }
+                case MaskType.CEP:
+                    if (value.Length == 8)
+                        value = $"{value.Substring(0, 5)}-{value.Substring(5, 3)}";
+                    break;
+            }
 
             return value;
         }
