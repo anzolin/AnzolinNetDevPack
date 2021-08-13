@@ -7,8 +7,9 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 [![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
+[![Watchers][watchers-shield]][watchers-url]
 [![Stargazers][stars-shield]][stars-url]
+[![Forks][forks-shield]][forks-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
@@ -124,6 +125,8 @@ Thank you!
 [contributors-url]: https://github.com/anzolin/AnzolinNetDevPack/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/anzolin/AnzolinNetDevPack.svg?style=for-the-badge
 [forks-url]: https://github.com/anzolin/AnzolinNetDevPack/network/members
+[watchers-shield]: https://img.shields.io/github/watchers/anzolin/AnzolinNetDevPack.svg?style=for-the-badge
+[watchers-url]: https://github.com/anzolin/AnzolinNetDevPack/watchers
 [stars-shield]: https://img.shields.io/github/stars/anzolin/AnzolinNetDevPack.svg?style=for-the-badge
 [stars-url]: https://github.com/anzolin/AnzolinNetDevPack/stargazers
 [issues-shield]: https://img.shields.io/github/issues/anzolin/AnzolinNetDevPack.svg?style=for-the-badge
