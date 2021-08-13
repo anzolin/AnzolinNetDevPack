@@ -60,7 +60,7 @@ dotnet add package AnzolinNetDevPack
 ## How it works
 
 | Class | Function | Parameters | Summary `pt-br` | Summary `en-us` |
-|---|---|---|---|
+|---|---|---|---|---|
 | **DateTimeHelper** | `GetDateTimeBrasilia` | N/A | Retorna a data/hora de agora de Brasília ("America/Sao_Paulo"). |  |
 | **DateTimeHelper** | `GetDateTimeByTimeZone` | **string** windowsOrIanaTimeZoneId | Retorna a data/hora de agora de acordo com o timezone informado, exemplo: "America/Sao_Paulo". |  |
 | **EnumHelper** | `GetValue` | **object** aEnum | Retorna o valor inteiro do objeto enum informado. |  |
