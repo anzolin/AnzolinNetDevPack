@@ -13,7 +13,7 @@ namespace AnzolinNetDevPack.Helpers
         public static MySqlStorage Storage { get; set; }
 
         /// <summary>
-        /// 
+        /// Enfilera um trabalho.
         /// </summary>
         /// <param name="methodCall"></param>
         /// <returns></returns>
@@ -42,7 +42,7 @@ namespace AnzolinNetDevPack.Helpers
         }
 
         /// <summary>
-        /// 
+        /// Retorna os detalhes do trabalho informado.
         /// </summary>
         /// <param name="storage"></param>
         /// <param name="jobId"></param>
@@ -59,7 +59,7 @@ namespace AnzolinNetDevPack.Helpers
         }
 
         /// <summary>
-        /// 
+        /// Retorna o resultado da execução do trabalho informado.
         /// </summary>
         /// <param name="storage"></param>
         /// <param name="jobId"></param>
