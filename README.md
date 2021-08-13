@@ -59,34 +59,34 @@ dotnet add package AnzolinNetDevPack
 
 ## How it works
 
-| Class | Function | Parameters | Summary `pt-br` |
+| Class | Function | Parameters | Summary `pt-br` | Summary `en-us` |
 |---|---|---|---|
-| **DateTimeHelper** | `GetDateTimeBrasilia` | N/A | Retorna a data/hora de agora de Brasília ("America/Sao_Paulo"). |
-| **DateTimeHelper** | `GetDateTimeByTimeZone` | **string** windowsOrIanaTimeZoneId | Retorna a data/hora de agora de acordo com o timezone informado, exemplo: "America/Sao_Paulo". |
-| **EnumHelper** | `GetValue` | **object** aEnum | Retorna o valor inteiro do objeto enum informado. |
-| **EnumHelper** | `GetText` | **object** aEnum | Retorna o valor texto do objeto enum informado. |
-| **EnumHelper** | `GetText` | **Type** aEnumType, **int** aKey | Retorna o valor texto do objeto enum informado. |
-| **EnumHelper** | `GetText` | **Type** aEnumType, **string** vEnumName | Retorna o valor texto do objeto enum informado. |
-| **EnumHelper** | `GetValueDisplayDictionary` | **Type** aEnumType | Retorna um dicionário do tipo int, string do objeto enum informado. |
-| **EnumHelper** | `GetSelectListItems` | **Type** aEnumType, **int?** value | Retorna uma lista do tipo SelectListItem do objeto enum informado. Para ser utilizado em lookups. |
-| **HangfireForMySqlHelper** | `Enqueue` | **Expression** methodCall | Enfilera um trabalho. |
-| **HangfireForMySqlHelper** | `GetJobDetails` | **MySqlStorage** storage, **string** jobId | Retorna os detalhes do trabalho informado. |
-| **HangfireForMySqlHelper** | `GetJobResult` | **MySqlStorage** storage, **string** jobId | Retorna o resultado da execução do trabalho informado. |
-| **SearchHelper** | `ApplyPaging` | **IEnumerable** enumerable, **int** count, **int** pageSize, **int?** page | Aplica uma paginação para o IEnumerable TModel. |
-| **StringHelper** | `RemoveMask` | **string** value | Remove todos caracteres, deixando apenas letras e números. |
-| **StringHelper** | `AddMask` | **MaskType** type, **string** value | Aplica a máscara escolhida. |
-| **StringHelper** | `OnlyNumbers` | **string** value | Remove todas letras, deixando apenas números. |
-| **TimeHelper** | `ConvertTime` | **string** time, **TimeHelper.Type** returnType | Converte uma string no formato "hh:mm:ss" para o tipo informado pelo parâmetro "returnType". |
-| **TimeHelper** | `ConvertTime` | **string** time | Converte uma string no formato "hh:mm:ss" para um DateTime contendo a hora, em que o "dia", "mes" e "ano" são de um "DateTime.MinValue". |
-| **TimeHelper** | `GetTimeAsString` | **double** time, **TimeHelper.Type** fromType | Obtêm uma hora no formato "hh:mm:ss" à partir tempo e tipo de tempo informados. |
-| **TimeHelper** | `GetTimeAsArray` | **string** time | Obtêm uma hora como um array de 3 posições representando horas, minutos e segundos respectivamente, à partir tempo informado. Caso ocorra algum erro retorna nulo. |
-| **TimeHelper** | `GetTime` | **DateTimeOffset** data | Retorna somente a informação de hora, minuto e segundo de uma data completa. |
-| **TimeHelper** | `GetTime` | **DateTime** data | Retorna somente a informação de hora, minuto e segundo de uma data completa. |
-| **TimeHelper** | `Truncate` | **DateTimeOffset** data |  |
-| **CpfCnpjValidator** | `IsValid` | **string** cpfCnpj | Valida o documento informado. |
-| **CpfCnpjValidator** | `IsCpf` | **string** cpf | Valida se é um CPF. |
-| **CpfCnpjValidator** | `IsCnpj` | **string** cnpj | Valida se é CNPJ. |
-| **EmailValidator** | `IsValidEmail` | **string** email | Valida se é um e-mail. |
+| **DateTimeHelper** | `GetDateTimeBrasilia` | N/A | Retorna a data/hora de agora de Brasília ("America/Sao_Paulo"). |  |
+| **DateTimeHelper** | `GetDateTimeByTimeZone` | **string** windowsOrIanaTimeZoneId | Retorna a data/hora de agora de acordo com o timezone informado, exemplo: "America/Sao_Paulo". |  |
+| **EnumHelper** | `GetValue` | **object** aEnum | Retorna o valor inteiro do objeto enum informado. |  |
+| **EnumHelper** | `GetText` | **object** aEnum | Retorna o valor texto do objeto enum informado. |  |
+| **EnumHelper** | `GetText` | **Type** aEnumType, **int** aKey | Retorna o valor texto do objeto enum informado. |  |
+| **EnumHelper** | `GetText` | **Type** aEnumType, **string** vEnumName | Retorna o valor texto do objeto enum informado. |  |
+| **EnumHelper** | `GetValueDisplayDictionary` | **Type** aEnumType | Retorna um dicionário do tipo int, string do objeto enum informado. |  |
+| **EnumHelper** | `GetSelectListItems` | **Type** aEnumType, **int?** value | Retorna uma lista do tipo SelectListItem do objeto enum informado. Para ser utilizado em lookups. |  |
+| **HangfireForMySqlHelper** | `Enqueue` | **Expression** methodCall | Enfilera um trabalho. |  |
+| **HangfireForMySqlHelper** | `GetJobDetails` | **MySqlStorage** storage, **string** jobId | Retorna os detalhes do trabalho informado. |  |
+| **HangfireForMySqlHelper** | `GetJobResult` | **MySqlStorage** storage, **string** jobId | Retorna o resultado da execução do trabalho informado. |  |
+| **SearchHelper** | `ApplyPaging` | **IEnumerable** enumerable, **int** count, **int** pageSize, **int?** page | Aplica uma paginação para o IEnumerable TModel. |  |
+| **StringHelper** | `RemoveMask` | **string** value | Remove todos caracteres, deixando apenas letras e números. |  |
+| **StringHelper** | `AddMask` | **MaskType** type, **string** value | Aplica a máscara escolhida. |  |
+| **StringHelper** | `OnlyNumbers` | **string** value | Remove todas letras, deixando apenas números. |  |
+| **TimeHelper** | `ConvertTime` | **string** time, **TimeHelper.Type** returnType | Converte uma string no formato "hh:mm:ss" para o tipo informado pelo parâmetro "returnType". |  |
+| **TimeHelper** | `ConvertTime` | **string** time | Converte uma string no formato "hh:mm:ss" para um DateTime contendo a hora, em que o "dia", "mes" e "ano" são de um "DateTime.MinValue". |  |
+| **TimeHelper** | `GetTimeAsString` | **double** time, **TimeHelper.Type** fromType | Obtêm uma hora no formato "hh:mm:ss" à partir tempo e tipo de tempo informados. |  |
+| **TimeHelper** | `GetTimeAsArray` | **string** time | Obtêm uma hora como um array de 3 posições representando horas, minutos e segundos respectivamente, à partir tempo informado. Caso ocorra algum erro retorna nulo. |  |
+| **TimeHelper** | `GetTime` | **DateTimeOffset** data | Retorna somente a informação de hora, minuto e segundo de uma data completa. |  |
+| **TimeHelper** | `GetTime` | **DateTime** data | Retorna somente a informação de hora, minuto e segundo de uma data completa. |  |
+| **TimeHelper** | `Truncate` | **DateTimeOffset** data |  |  |
+| **CpfCnpjValidator** | `IsValid` | **string** cpfCnpj | Valida o documento informado. |  |
+| **CpfCnpjValidator** | `IsCpf` | **string** cpf | Valida se é um CPF. |  |
+| **CpfCnpjValidator** | `IsCnpj` | **string** cnpj | Valida se é CNPJ. |  |
+| **EmailValidator** | `IsValidEmail` | **string** email | Valida se é um e-mail. |  |
 
 
 ## Examples
