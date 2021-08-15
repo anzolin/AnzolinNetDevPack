@@ -23,11 +23,9 @@
   </summary>
   <ol>
     <li><a href="#what-is-the-anzolinnetdevpack">What is the AnzolinNetDevPack?</a></li>
-    <li><a href="#get-started">Get Started</a></li>
     <li><a href="#how-it-works">How it works</a></li>
     <li><a href="#examples">Examples</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#give-a-star">Give a Star!</a></li>
     <li><a href="#about-the-author">About the author</a></li>
     <li><a href="#donate">Donate</a></li>
   </ol>
@@ -38,23 +36,15 @@
 
 # What is the AnzolinNetDevPack?
 
+[![NuGet](https://img.shields.io/nuget/v/AnzolinNetDevPack)](https://www.nuget.org/packages/AnzolinNetDevPack/)  [![NuGet](https://img.shields.io/nuget/dt/AnzolinNetDevPack)](https://www.nuget.org/packages/AnzolinNetDevPack/)
+
 A smart set of common classes and implementations to improve your development productivity bundled in NuGet Packages.
 
-See [my NuGet Profile](https://www.nuget.org/profiles/anzolin) to find more interesting packages.
+This project is an update of [Anzolin.Net.NuGet](https://github.com/anzolin/Anzolin.Net.NuGet) which I decided to change the name, adjust a project pattern and also unify the nuget packages into a single package.
 
+If you want to help the project, improving it or creating something new, welcome.
 
-## Get Started
-
-This nuget package can be installed using the Nuget package manager or the `dotnet` CLI.
-
-```powershell
-dotnet add package AnzolinNetDevPack
-```
-
-
-| Package             | Version                                                                                                         | Popularity                                                                                                       |
-|---------------------|-----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
-| `AnzolinNetDevPack` | [![NuGet](https://img.shields.io/nuget/v/AnzolinNetDevPack)](https://www.nuget.org/packages/AnzolinNetDevPack/) | [![NuGet](https://img.shields.io/nuget/dt/AnzolinNetDevPack)](https://www.nuget.org/packages/AnzolinNetDevPack/) |
+Also see [my NuGet Profile](https://www.nuget.org/profiles/anzolin) to find more interesting packages.
 
 
 ## How it works
@@ -97,11 +87,6 @@ The sample application that uses the features will be available soon. In the mea
 ## License
 
 This NuGet Package is [MIT Licensed](https://github.com/anzolin/AnzolinNetDevPack/blob/master/LICENSE).
-
-
-## Give a Star!
-
-:star: If you liked the project or if it helped you, please give a star ;)
 
   
 ## About the author
