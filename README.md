@@ -37,7 +37,7 @@
 
 [![NuGet](https://img.shields.io/nuget/v/AnzolinNetDevPack)](https://www.nuget.org/packages/AnzolinNetDevPack/)  [![NuGet](https://img.shields.io/nuget/dt/AnzolinNetDevPack)](https://www.nuget.org/packages/AnzolinNetDevPack/)
 
-A smart set of common classes and implementations to improve your development productivity bundled in NuGet Packages.
+A NuGet Package that contains a group of help and validation classes that will help you in your ability to produce applications in an easier way.
 
 This project is an update of [Anzolin.Net.NuGet](https://github.com/anzolin/Anzolin.Net.NuGet) which I decided to change the name, adjust a project pattern and also unify the nuget packages into a single package.
 
