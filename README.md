@@ -18,7 +18,7 @@
 <!-- TABLE OF CONTENTS -->
 ### Table of Contents
 <ol>
-  <li><a href="#what-is-the-anzolinnetdevpack">What is the AnzolinNetDevPack?</a></li>
+  <li><a href="#what-is">What is?</a></li>
   <li><a href="#how-it-works">How it works</a></li>
   <li><a href="#examples">Examples</a></li>
   <li><a href="#license">License</a></li>
@@ -29,7 +29,7 @@
 ---
 
 
-# What is the AnzolinNetDevPack?
+# What is?
 
 [![NuGet](https://img.shields.io/nuget/v/AnzolinNetDevPack)](https://www.nuget.org/packages/AnzolinNetDevPack/)  [![NuGet](https://img.shields.io/nuget/dt/AnzolinNetDevPack)](https://www.nuget.org/packages/AnzolinNetDevPack/)
 
