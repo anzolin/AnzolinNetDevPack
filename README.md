@@ -16,19 +16,15 @@
 ---
 
 <!-- TABLE OF CONTENTS -->
-<details open="open">
-  <summary>
-    <h2 style="display: inline-block">Table of Contents</h2>
-  </summary>
-  <ol>
-    <li><a href="#what-is-the-anzolinnetdevpack">What is the AnzolinNetDevPack?</a></li>
-    <li><a href="#how-it-works">How it works</a></li>
-    <li><a href="#examples">Examples</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#about-the-author">About the author</a></li>
-    <li><a href="#donate">Donate</a></li>
-  </ol>
-</details>
+### Table of Contents
+<ol>
+  <li><a href="#what-is-the-anzolinnetdevpack">What is the AnzolinNetDevPack?</a></li>
+  <li><a href="#how-it-works">How it works</a></li>
+  <li><a href="#examples">Examples</a></li>
+  <li><a href="#license">License</a></li>
+  <li><a href="#about-the-author">About the author</a></li>
+  <li><a href="#donate">Donate</a></li>
+</ol>
 
 ---
 
