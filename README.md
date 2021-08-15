@@ -81,7 +81,9 @@ Also see [my NuGet Profile](https://www.nuget.org/profiles/anzolin) to find more
 
 ## Examples
 
-The sample application that uses the features will be available soon. In the meantime, explore the code to understand what it covers. 
+The application containing all the examples is under development, you can find some of them in the examples folder.
+
+I recommend that you explore the code to understand what it covers, as it is easy to understand.
 
 
 ## License
