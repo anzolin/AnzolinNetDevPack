@@ -40,6 +40,8 @@
 
 A smart set of common classes and implementations to improve your development productivity bundled in NuGet Packages.
 
+This project is an update of [Anzolin.Net.NuGet](https://github.com/anzolin/Anzolin.Net.NuGet) which I decided to change the name, adjust a project pattern and also unify the nuget packages into a single package.
+
 See [my NuGet Profile](https://www.nuget.org/profiles/anzolin) to find more interesting packages.
 
 
