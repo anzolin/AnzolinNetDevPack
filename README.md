@@ -80,9 +80,9 @@ Also see [my NuGet Profile](https://www.nuget.org/profiles/anzolin) to find more
 
 ## Examples
 
-The application containing all the examples is under development, you can find some of them in the examples folder.
+The application containing all the examples is under development but you can find some of them in the examples folder.
 
-I recommend that you explore the code to understand what it covers, as it is easy to understand.
+I recommend that you explore the code to understand what it covers, it's easy to understand.
 
 
 ## License
