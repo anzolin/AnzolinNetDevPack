@@ -5,13 +5,22 @@ namespace AnzolinNetDevPack.Helpers
 {
     public static class TimeHelper
     {
+        public enum Type
+        {
+            Milliseconds = 0,
+            Seconds = 1,
+            Minutes = 2,
+            Hours = 3,
+            Days = 4
+        }
+        
         /// <summary>
         /// Converte uma string no formato "hh:mm:ss" para o tipo informado pelo parâmetro "returnType"
         /// </summary>
         /// <param name="time"></param>
         /// <param name="returnType"></param>
         /// <returns></returns>
-        public static double ConvertTime(string time, TimeHelper.Type returnType)
+        public static double ConvertTime(string time, Type returnType)
         {
             double returnTime = 0;
 
@@ -56,11 +65,9 @@ namespace AnzolinNetDevPack.Helpers
         }
 
         /// <summary>
-        /// Converte uma string no formato "hh:mm:ss" para um DateTime contendo a hora, em que o "dia", "mes" e
-        /// "ano" são de um "DateTime.MinValue".
+        /// Converte uma string no formato "hh:mm:ss" para um DateTime contendo a hora, em que o "dia", "mes" e "ano" são de um "DateTime.MinValue".
         /// </summary>
         /// <param name="time"></param>
-        /// <param name="returnType"></param>
         /// <returns></returns>
         public static DateTime? ConvertTime(string time)
         {
@@ -71,7 +78,7 @@ namespace AnzolinNetDevPack.Helpers
                 if (timeArr != null && timeArr.Length != 3)
                     return null;
 
-                if (timeArr.Length == 3)
+                if (timeArr != null && timeArr.Length == 3)
                     return new DateTime(DateTime.MinValue.Year, DateTime.MinValue.Month, DateTime.MinValue.Day, timeArr[0], timeArr[1], timeArr[2]);
                 
                 return null;
@@ -88,7 +95,7 @@ namespace AnzolinNetDevPack.Helpers
         /// <param name="time"></param>
         /// <param name="fromType"></param>
         /// <returns></returns>
-        public static string GetTimeAsString(double time, TimeHelper.Type fromType)
+        public static string GetTimeAsString(double time, Type fromType)
         {
             try
             {
@@ -128,8 +135,7 @@ namespace AnzolinNetDevPack.Helpers
         }
 
         /// <summary>
-        /// Obtêm uma hora como um array de 3 posições representando horas, minutos e segundos
-        /// respectivamente, à partir tempo informado. Caso ocorra algum erro retorna nulo.
+        /// Obtêm uma hora como um array de 3 posições representando horas, minutos e segundos respectivamente, à partir tempo informado. Caso ocorra algum erro retorna nulo.
         /// </summary>
         /// <param name="time"></param>
         /// <returns></returns>
@@ -166,18 +172,14 @@ namespace AnzolinNetDevPack.Helpers
             return new DateTime(DateTime.MinValue.Year, DateTime.MinValue.Month, DateTime.MinValue.Day, data.Hour, data.Minute, data.Second);
         }
 
+        /// <summary>
+        /// Retorna a data e hora completa, sendo o tempo absoluto.
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
         public static DateTimeOffset Truncate(DateTimeOffset data)
         {
             return new DateTimeOffset(data.Year, data.Month, data.Day, data.Hour, data.Minute, data.Second, data.Offset);
-        }
-
-        public enum Type
-        {
-            Milliseconds = 0,
-            Seconds = 1,
-            Minutes = 2,
-            Hours = 3,
-            Days = 4
         }
     }
 }

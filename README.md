@@ -75,7 +75,7 @@ Also see [my NuGet Profile](https://www.nuget.org/profiles/anzolin) to find more
 | **TimeHelper** | `GetTimeAsArray` | **string** time | Obtêm uma hora como um array de 3 posições representando horas, minutos e segundos respectivamente, à partir tempo informado. Caso ocorra algum erro retorna nulo. |  |
 | **TimeHelper** | `GetTime` | **DateTimeOffset** data | Retorna somente a informação de hora, minuto e segundo de uma data completa. |  |
 | **TimeHelper** | `GetTime` | **DateTime** data | Retorna somente a informação de hora, minuto e segundo de uma data completa. |  |
-| **TimeHelper** | `Truncate` | **DateTimeOffset** data |  |  |
+| **TimeHelper** | `Truncate` | **DateTimeOffset** data | Retorna a data e hora completa, sendo o tempo absoluto. |  |
 | **CpfCnpjValidator** | `IsValid` | **string** cpfCnpj | Valida o documento informado. |  |
 | **CpfCnpjValidator** | `IsCpf` | **string** cpf | Valida se é um CPF. |  |
 | **CpfCnpjValidator** | `IsCnpj` | **string** cnpj | Valida se é CNPJ. |  |
