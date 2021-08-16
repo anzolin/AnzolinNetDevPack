@@ -48,6 +48,7 @@ Also see [my NuGet Profile](https://www.nuget.org/profiles/anzolin) to find more
 
 | Class | Function | Parameters | Summary `pt-br` | Summary `en-us` |
 |---|---|---|---|---|
+| **DateHelper** | `DateDiff` | **IntervalType** type, **DateTime** fromDate, **DateTime** toDate | Retorna entre datas de acordo com o tipo de intervalo escolhido. | |
 | **DateTimeHelper** | `GetDateTimeBrasilia` | N/A | Retorna a data/hora de agora de Brasília ("America/Sao_Paulo"). |  |
 | **DateTimeHelper** | `GetDateTimeByTimeZone` | **string** windowsOrIanaTimeZoneId | Retorna a data/hora de agora de acordo com o timezone informado, exemplo: "America/Sao_Paulo". |  |
 | **EnumHelper** | `GetValue` | **object** aEnum | Retorna o valor inteiro do objeto enum informado. |  |
@@ -66,6 +67,8 @@ Also see [my NuGet Profile](https://www.nuget.org/profiles/anzolin) to find more
 | **StringHelper** | `RemoveMask` | **string** value | Remove todos caracteres, deixando apenas letras e números. |  |
 | **StringHelper** | `AddMask` | **MaskType** type, **string** value | Aplica a máscara escolhida. |  |
 | **StringHelper** | `OnlyNumbers` | **string** value | Remove todas letras, deixando apenas números. |  |
+| **StringHelper** | `FirstChatToUpper` | **string** value | Aplica o primeiro caracter da string como maiúsculo. | |
+| **StringHelper** | `RemoveAccents` | **string** value | Remove acentuações. | |
 | **TimeHelper** | `ConvertTime` | **string** time, **TimeHelper.Type** returnType | Converte uma string no formato "hh:mm:ss" para o tipo informado pelo parâmetro "returnType". |  |
 | **TimeHelper** | `ConvertTime` | **string** time | Converte uma string no formato "hh:mm:ss" para um DateTime contendo a hora, em que o "dia", "mes" e "ano" são de um "DateTime.MinValue". |  |
 | **TimeHelper** | `GetTimeAsString` | **double** time, **TimeHelper.Type** fromType | Obtêm uma hora no formato "hh:mm:ss" à partir tempo e tipo de tempo informados. |  |

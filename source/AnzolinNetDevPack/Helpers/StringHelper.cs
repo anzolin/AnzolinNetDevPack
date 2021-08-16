@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Text;
 
 namespace AnzolinNetDevPack.Helpers
 {
@@ -61,6 +62,28 @@ namespace AnzolinNetDevPack.Helpers
         public static string OnlyNumbers(string value)
         {
             return string.IsNullOrEmpty(value) ? string.Empty : new string(value.Where(char.IsDigit).ToArray());
+        }
+
+        /// <summary>
+        /// Aplica o primeiro caracter da string como maiúsculo.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static string FirstChatToUpper(string value)
+        {
+            return string.IsNullOrEmpty(value) ? value : $"{char.ToUpper(value[0])}{value.Substring(1)}";
+        }
+
+        /// <summary>
+        /// Remove acentuações.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static string RemoveAccents(string value)
+        {
+            var bytes = Encoding.GetEncoding("Cyrillic").GetBytes(value);
+
+            return Encoding.ASCII.GetString(bytes);
         }
     }
 }
