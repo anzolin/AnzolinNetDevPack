@@ -19,7 +19,7 @@
 ### Table of Contents
 <ol>
   <li><a href="#what-is">What is?</a></li>
-  <li><a href="#how-it-works">How it works</a></li>
+  <li><a href="#how-it-works">How it works?</a></li>
   <li><a href="#examples">Examples</a></li>
   <li><a href="#how-can-i-contribute">How can I contribute?</a></li>
   <li><a href="#license">License</a></li>
@@ -32,7 +32,10 @@
 
 ## What is?
 
-[![NuGet](https://img.shields.io/nuget/v/AnzolinNetDevPack)](https://www.nuget.org/packages/AnzolinNetDevPack/)  [![NuGet](https://img.shields.io/nuget/dt/AnzolinNetDevPack)](https://www.nuget.org/packages/AnzolinNetDevPack/)
+| Current version | Downloads |
+|---|---|
+| [![NuGet](https://img.shields.io/nuget/v/AnzolinNetDevPack)](https://www.nuget.org/packages/AnzolinNetDevPack/) | [![NuGet](https://img.shields.io/nuget/dt/AnzolinNetDevPack)](https://www.nuget.org/packages/AnzolinNetDevPack/) |
+
 
 A NuGet Package that contains a group of help and validation classes that will help you in your ability to produce applications in an easier way.
 
@@ -41,7 +44,7 @@ This project is an update of [Anzolin.Net.NuGet](https://github.com/anzolin/Anzo
 Also see [my NuGet Profile](https://www.nuget.org/profiles/anzolin) to find more interesting packages.
 
 
-## How it works
+## How it works?
 
 | Class | Function | Parameters | Summary `pt-br` | Summary `en-us` |
 |---|---|---|---|---|
