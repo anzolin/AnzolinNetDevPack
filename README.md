@@ -21,6 +21,7 @@
   <li><a href="#what-is">What is?</a></li>
   <li><a href="#how-it-works">How it works</a></li>
   <li><a href="#examples">Examples</a></li>
+  <li><a href="#how-can-i-contribute">How can I contribute?</a></li>
   <li><a href="#license">License</a></li>
   <li><a href="#about-the-author">About the author</a></li>
   <li><a href="#donate">Donate</a></li>
@@ -36,8 +37,6 @@
 A NuGet Package that contains a group of help and validation classes that will help you in your ability to produce applications in an easier way.
 
 This project is an update of [Anzolin.Net.NuGet](https://github.com/anzolin/Anzolin.Net.NuGet) which I decided to change the name, adjust a project pattern and also unify the nuget packages into a single package.
-
-If you want to help the project, improving it or creating something new, welcome.
 
 Also see [my NuGet Profile](https://www.nuget.org/profiles/anzolin) to find more interesting packages.
 
@@ -82,6 +81,11 @@ Also see [my NuGet Profile](https://www.nuget.org/profiles/anzolin) to find more
 The application containing all the examples is under development but you can find some of them in the examples folder.
 
 I recommend that you explore the code to understand what it covers, it's easy to realize.
+
+
+## How can I contribute?
+
+If you want to help the project, improving it or creating something new, welcome. Rhis project was created to be a home of useful and reusable pieces of code for the .NET community. So if you have any code snippet that is useful, clean, decoupled and tested, and want to contribute to this goal, please make a [pull request](https://github.com/anzolin/AnzolinNetDevPack/pulls)!
 
 
 ## License
