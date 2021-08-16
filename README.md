@@ -85,7 +85,7 @@ I recommend that you explore the code to understand what it covers, it's easy to
 
 ## How can I contribute?
 
-If you want to help the project, improving it or creating something new, welcome. Rhis project was created to be a home of useful and reusable pieces of code for the .NET community. So if you have any code snippet that is useful, clean, decoupled and tested, and want to contribute to this goal, please make a [pull request](https://github.com/anzolin/AnzolinNetDevPack/pulls)!
+If you want to help the project, improving it or creating something new, welcome. This project was created to be a home of useful and reusable pieces of code for the .NET community. So if you have any code snippet that is useful, clean, decoupled and tested, and want to contribute to this goal, please make a [pull request](https://github.com/anzolin/AnzolinNetDevPack/pulls)!
 
 
 ## License
