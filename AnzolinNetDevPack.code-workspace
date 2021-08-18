@@ -16,14 +16,16 @@
   },
   "folders": [
     {
-      "path": "source/AnzolinNetDevPack"
+      "path": "source/AnzolinNetDevPack",
+      "name": "AnzolinNetDevPack"
     },
     {
-      "path": "examples/AnzolinNetDevPack.Examples"
+      "path": "examples/AnzolinNetDevPack.Examples",
+      "name": "AnzolinNetDevPack.Examples"
     },
     {
       "path": ".",
-	  "name": "SOURCE_FOLDER"
+      "name": "SOURCE_FOLDER"
     }
   ]
 }
