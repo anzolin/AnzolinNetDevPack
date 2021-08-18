@@ -32,12 +32,11 @@
 
 ## What is?
 
+**AnzolinNetDevPack** is a NuGet Package that contains a group of help and validation classes that will help you in your ability to produce applications in an easier way.
+
 | Current version | Downloads |
 |---|---|
-| [![NuGet](https://img.shields.io/nuget/v/AnzolinNetDevPack)](https://www.nuget.org/packages/AnzolinNetDevPack/) | [![NuGet](https://img.shields.io/nuget/dt/AnzolinNetDevPack)](https://www.nuget.org/packages/AnzolinNetDevPack/) |
-
-
-A NuGet Package that contains a group of help and validation classes that will help you in your ability to produce applications in an easier way.
+| [![NuGet](https://img.shields.io/nuget/v/AnzolinNetDevPack?style=for-the-badge)](https://www.nuget.org/packages/AnzolinNetDevPack/) | [![NuGet](https://img.shields.io/nuget/dt/AnzolinNetDevPack?style=for-the-badge)](https://www.nuget.org/packages/AnzolinNetDevPack/) |
 
 This project is an update of [Anzolin.Net.NuGet](https://github.com/anzolin/Anzolin.Net.NuGet) which I decided to change the name, adjust a project pattern and also unify the nuget packages into a single package.
 
@@ -96,12 +95,12 @@ If you want to help the project, improving it or creating something new, welcome
 
 ## License
 
-This NuGet Package is [MIT Licensed](https://github.com/anzolin/AnzolinNetDevPack/blob/master/LICENSE).
+This project is [MIT Licensed](https://github.com/anzolin/AnzolinNetDevPack/blob/master/LICENSE).
 
   
 ## About the author
 
-Hello everyone, my name is Diego Anzolin Ferreira. I'm a .NET developer from Brazil. I hope you will enjoy this NuGet Package as much as I enjoy developing it. If you have any problems, you can post a [GitHub issue](https://github.com/anzolin/AnzolinNetDevPack/issues). You can reach me out at diego@anzolin.com.br.
+Hello everyone, my name is Diego Anzolin Ferreira. I'm a .NET developer from Brazil. I hope you will enjoy this project as much as I enjoy developing it. If you have any problems, you can post a [GitHub issue](https://github.com/anzolin/AnzolinNetDevPack/issues). You can reach me out at diego@anzolin.com.br.
 
 
 ## Donate
