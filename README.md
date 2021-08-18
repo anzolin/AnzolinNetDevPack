@@ -19,6 +19,7 @@
 ### Table of Contents
 <ol>
   <li><a href="#what-is">What is?</a></li>
+  <li><a href="#install">Install</a></li>
   <li><a href="#how-it-works">How it works?</a></li>
   <li><a href="#examples">Examples</a></li>
   <li><a href="#how-can-i-contribute">How can I contribute?</a></li>
@@ -41,6 +42,19 @@
 This project is an update of [Anzolin.Net.NuGet](https://github.com/anzolin/Anzolin.Net.NuGet) which I decided to change the name, adjust a project pattern and also unify the nuget packages into a single package.
 
 Also see [my NuGet Profile](https://www.nuget.org/profiles/anzolin) to find more interesting packages.
+
+
+## Install
+
+From a command prompt:
+
+```bash
+dotnet add package AnzolinNetDevPack
+```
+
+```bash
+Install-Package AnzolinNetDevPack
+```
 
 
 ## How it works?
