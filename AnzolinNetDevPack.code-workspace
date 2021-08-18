@@ -20,7 +20,7 @@
       "name": "AnzolinNetDevPack"
     },
     {
-      "path": "examples/AnzolinNetDevPack.Examples",
+      "path": "source/AnzolinNetDevPack.Examples",
       "name": "AnzolinNetDevPack.Examples"
     },
     {
