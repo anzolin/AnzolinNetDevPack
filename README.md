@@ -103,7 +103,7 @@ Install-Package AnzolinNetDevPack
 
 ## Examples
 
-The application containing all the examples is under development but you can find some of them in the examples folder.
+The application containing all the examples is under development but you can find some of them.
 
 I recommend that you explore the code to understand what it covers, it's easy to realize.
 
