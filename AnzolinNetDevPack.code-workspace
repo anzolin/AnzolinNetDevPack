@@ -1,0 +1,29 @@
+{
+  "settings": {
+    "files.autoSave": "afterDelay",
+    "workbench.colorTheme": "Dracula Soft",
+    "terminal.integrated.cwd": "../",
+    "editor.wordWrap": "on",
+    "editor.formatOnSave": true, // Formata o código sempre que salvamos
+    "editor.fontFamily": "Consolas", // Fonte
+    "editor.fontSize": 14, // Tamanho da Fonte
+    "editor.minimap.enabled": true, // Desabilita o Mini Map
+    "git.enableSmartCommit": true, // Habilita Smart Commit do GIT
+    "git.autofetch": true // Habilita Auto Fetch do GIT
+  },
+  "extensions": {
+    "recommendations": []
+  },
+  "folders": [
+    {
+      "path": "source/AnzolinNetDevPack"
+    },
+    {
+      "path": "examples/AnzolinNetDevPack.Examples"
+    },
+    {
+      "path": ".",
+	  "name": "SOURCE_FOLDER"
+    }
+  ]
+}
