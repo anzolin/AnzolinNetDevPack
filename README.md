@@ -99,6 +99,8 @@ Install-Package AnzolinNetDevPack
 | **CpfCnpjValidator** | `IsCpf` | **string** cpf | Valida se é um CPF. |  |
 | **CpfCnpjValidator** | `IsCnpj` | **string** cnpj | Valida se é CNPJ. |  |
 | **EmailValidator** | `IsValidEmail` | **string** email | Valida se é um e-mail. |  |
+| **Services** | `ConsultaCnpj` | **string** cnpj | Consulta os dados da pessoa jurídica através do Cnpj informado. |  |
+| **Services** | `ConsultaCnpjAsync` | **string** cnpj | Consulta os dados da pessoa jurídica através do Cnpj informado. |  |
 
 
 ## Examples
