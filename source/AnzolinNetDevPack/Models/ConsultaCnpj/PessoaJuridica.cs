@@ -87,6 +87,9 @@ namespace AnzolinNetDevPack.Models.ConsultaCnpj
         [JsonProperty("capital_social")]
         public string CapitalSocial { get; set; }
 
+        [JsonProperty("porte")]
+        public string Porte { get; set; }
+
         //[JsonProperty("extra")]
         //public Extra Extra { get; set; }
     }
