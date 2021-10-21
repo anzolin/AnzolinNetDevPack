@@ -49,7 +49,7 @@ Also see [my NuGet Profile](https://www.nuget.org/profiles/anzolin) to find more
 Just add a dependency in your .csproj file to get the nuget:
 
 ```xml
-<PackageReference Include="AnzolinNetDevPack" Version="1.0.5" />
+<PackageReference Include="AnzolinNetDevPack" Version="1.0.6" />
 ```
 
 Or from a command prompt:
