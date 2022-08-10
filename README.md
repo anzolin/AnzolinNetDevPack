@@ -49,7 +49,7 @@ Also see [my NuGet Profile](https://www.nuget.org/profiles/anzolin) to find more
 Just add a dependency in your .csproj file to get the nuget:
 
 ```xml
-<PackageReference Include="AnzolinNetDevPack" Version="1.1.0" />
+<PackageReference Include="AnzolinNetDevPack" Version="1.2.0" />
 ```
 
 Or from a command prompt:
@@ -88,6 +88,7 @@ Install-Package AnzolinNetDevPack
 | **StringHelper** | `OnlyNumbers` | **string** value | Remove todas letras, deixando apenas números. |  |
 | **StringHelper** | `FirstChatToUpper` | **string** value | Aplica o primeiro caracter da string como maiúsculo. | |
 | **StringHelper** | `RemoveAccents` | **string** value | Remove acentuações. | |
+| **StringHelper** | `SizeSuffix` | **string** value, **int** decimalPlaces | Converte e formata um número em tamanho de arquivo. | |
 | **TimeHelper** | `ConvertTime` | **string** time, **TimeHelper.Type** returnType | Converte uma string no formato "hh:mm:ss" para o tipo informado pelo parâmetro "returnType". |  |
 | **TimeHelper** | `ConvertTime` | **string** time | Converte uma string no formato "hh:mm:ss" para um DateTime contendo a hora, em que o "dia", "mes" e "ano" são de um "DateTime.MinValue". |  |
 | **TimeHelper** | `GetTimeAsString` | **double** time, **TimeHelper.Type** fromType | Obtêm uma hora no formato "hh:mm:ss" à partir tempo e tipo de tempo informados. |  |
