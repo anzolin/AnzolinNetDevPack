@@ -3,7 +3,7 @@ using System;
 
 namespace AnzolinNetDevPack.Helpers
 {
-    public static class EnumBackgroundColorHelper
+    public static class EnumCustomBagdeColorHelper
     {
         public static string GetBackgroundColor(object aEnum)
         {
@@ -14,14 +14,14 @@ namespace AnzolinNetDevPack.Helpers
             if (!vEnumType.IsEnum)
                 throw new Exception("Object is not an Enum");
 
-            var colorAttribute = (BackgroundColorAttribute)Attribute.GetCustomAttribute(vEnumType, typeof(BackgroundColorAttribute));
+            var colorAttribute = (CustomBadgeColorAttribute)Attribute.GetCustomAttribute(vEnumType, typeof(CustomBadgeColorAttribute));
 
             return colorAttribute.BackgroundColorHexCode;
         }
 
         public static string GetBackgroundColor(Type type)
         {
-            var colorAttribute = (BackgroundColorAttribute)Attribute.GetCustomAttribute(type, typeof(BackgroundColorAttribute));
+            var colorAttribute = (CustomBadgeColorAttribute)Attribute.GetCustomAttribute(type, typeof(CustomBadgeColorAttribute));
 
             return colorAttribute.BackgroundColorHexCode;
         }
@@ -33,7 +33,7 @@ namespace AnzolinNetDevPack.Helpers
 
             var vEnumName = type.GetEnumName(key);
             var vMemberInfo = type.GetMember(vEnumName);
-            var vAttributes = (BackgroundColorAttribute)vMemberInfo[0].GetCustomAttributes(typeof(BackgroundColorAttribute), false)[0];
+            var vAttributes = (CustomBadgeColorAttribute)vMemberInfo[0].GetCustomAttributes(typeof(CustomBadgeColorAttribute), false)[0];
 
             return vAttributes.BackgroundColorHexCode;
         }

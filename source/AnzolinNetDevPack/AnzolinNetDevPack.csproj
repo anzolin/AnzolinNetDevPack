@@ -6,7 +6,7 @@
     <PackageProjectUrl>https://github.com/anzolin/AnzolinNetDevPack</PackageProjectUrl>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
-    <Version>1.3.0</Version>
+    <Version>1.3.1</Version>
     <Description>A NuGet Package that contains a group of help and validation classes that will help you in your ability to produce applications in an easier way.</Description>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>

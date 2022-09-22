@@ -15,17 +15,17 @@ namespace AnzolinNetDevPack.Helpers
                 throw new Exception("Object is not an Enum");
 
             var label = EnumHelper.GetText(vEnumType, aEnum.ToString());
-            var badgeStyleAttribute = (BadgeStyleAttribute)Attribute.GetCustomAttribute(vEnumType, typeof(BadgeStyleAttribute));
+            var colors = (CustomBadgeColorAttribute)Attribute.GetCustomAttribute(vEnumType, typeof(CustomBadgeColorAttribute));
 
-            return $"<div class='badge badge-pill {badgeStyleAttribute.BackgroundColorClass}'>{label}</div>";
+            return $"<div class='badge' style='color: {colors.TextColorHexCode}; background-color: {colors.BackgroundColorHexCode}'>{label}</div>";
         }
 
         public static string GetBadge(Type type)
         {
             var label = EnumHelper.GetText(type);
-            var badgeStyleAttribute = (BadgeStyleAttribute)Attribute.GetCustomAttribute(type, typeof(BadgeStyleAttribute));
+            var colors = (CustomBadgeColorAttribute)Attribute.GetCustomAttribute(type, typeof(CustomBadgeColorAttribute));
 
-            return $"<div class='badge badge-pill {badgeStyleAttribute.BackgroundColorClass}'>{label}</div>";
+            return $"<div class='badge' style='color: {colors.TextColorHexCode}; background-color: {colors.BackgroundColorHexCode}'>{label}</div>";
         }
 
         public static string GetBadge(Type type, int key)
@@ -36,9 +36,9 @@ namespace AnzolinNetDevPack.Helpers
             var vEnumName = type.GetEnumName(key);
             var label = EnumHelper.GetText(type, vEnumName);
             var vMemberInfo = type.GetMember(vEnumName);
-            var vAttributes = (BadgeStyleAttribute)vMemberInfo[0].GetCustomAttributes(typeof(BadgeStyleAttribute), false)[0];
+            var vAttributes = (CustomBadgeColorAttribute)vMemberInfo[0].GetCustomAttributes(typeof(CustomBadgeColorAttribute), false)[0];
 
-            return $"<div class='badge badge-pill {vAttributes.BackgroundColorClass}'>{label}</div>";
+            return $"<div class='badge' style='color: {vAttributes.TextColorHexCode}; background-color: {vAttributes.BackgroundColorHexCode}'>{label}</div>";
         }
 
         public static string GetBadgeTextColorClass(Type type, int key)
@@ -49,9 +49,9 @@ namespace AnzolinNetDevPack.Helpers
             var vEnumName = type.GetEnumName(key);
             var label = EnumHelper.GetText(type, vEnumName);
             var vMemberInfo = type.GetMember(vEnumName);
-            var vAttributes = (BadgeStyleAttribute)vMemberInfo[0].GetCustomAttributes(typeof(BadgeStyleAttribute), false)[0];
+            var vAttributes = (CustomBadgeColorAttribute)vMemberInfo[0].GetCustomAttributes(typeof(CustomBadgeColorAttribute), false)[0];
 
-            return vAttributes.TextColorClass;
+            return vAttributes.TextColorHexCode;
         }
 
         public static string GetBadgeBackgroundColorClass(Type type, int key)
@@ -62,9 +62,9 @@ namespace AnzolinNetDevPack.Helpers
             var vEnumName = type.GetEnumName(key);
             var label = EnumHelper.GetText(type, vEnumName);
             var vMemberInfo = type.GetMember(vEnumName);
-            var vAttributes = (BadgeStyleAttribute)vMemberInfo[0].GetCustomAttributes(typeof(BadgeStyleAttribute), false)[0];
+            var vAttributes = (CustomBadgeColorAttribute)vMemberInfo[0].GetCustomAttributes(typeof(CustomBadgeColorAttribute), false)[0];
 
-            return vAttributes.BackgroundColorClass;
+            return vAttributes.BackgroundColorHexCode;
         }
     }
 }
