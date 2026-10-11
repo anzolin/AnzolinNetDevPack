@@ -18,8 +18,8 @@ namespace AnzolinNetDevPack.Helpers
         /// <summary>
         /// Remove todos caracteres, deixando apenas letras e números.
         /// </summary>
-        /// <param name="Value">Valor com a máscara.</param>
-        /// <returns>Retorna apanas números em uma String.</returns>
+        /// <param name="value">Valor com a máscara.</param>
+        /// <returns>Retorna apenas letras e números em uma String.</returns>
         public static string RemoveMask(string value)
         {
             return string.IsNullOrEmpty(value) ? string.Empty : new string(value.Where(char.IsLetterOrDigit).ToArray());
@@ -43,8 +43,12 @@ namespace AnzolinNetDevPack.Helpers
                     break;
 
                 case MaskType.CNPJ:
+                    // Aceita o CNPJ alfanumérico (IN RFB nº 2.229/2024), exibido em maiúsculas
                     if (value.Length == 14)
+                    {
+                        value = value.ToUpperInvariant();
                         value = $"{value.Substring(0, 2)}.{value.Substring(2, 3)}.{value.Substring(5, 3)}/{value.Substring(8, 4)}-{value.Substring(12, 2)}";
+                    }
                     break;
 
                 case MaskType.CEP:

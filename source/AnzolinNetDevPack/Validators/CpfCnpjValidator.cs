@@ -1,7 +1,19 @@
-﻿namespace AnzolinNetDevPack.Validators
+﻿using System.Linq;
+using System.Text.RegularExpressions;
+
+namespace AnzolinNetDevPack.Validators
 {
     public static class CpfCnpjValidator
     {
+        private static readonly int[] MultiplicadoresCpf1 = { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+        private static readonly int[] MultiplicadoresCpf2 = { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+        private static readonly int[] MultiplicadoresCnpj1 = { 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
+        private static readonly int[] MultiplicadoresCnpj2 = { 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
+
+        private static readonly Regex FormatoCpf = new(@"^[0-9]{11}$", RegexOptions.Compiled);
+        private static readonly Regex FormatoCnpj = new(@"^[A-Z0-9]{12}[0-9]{2}$", RegexOptions.Compiled);
+        private static readonly Regex DigitosRepetidos = new(@"^(\d)\1+$", RegexOptions.Compiled);
+
         /// <summary>
         /// Valida o documento informado.
         /// </summary>
@@ -17,93 +29,67 @@
         /// </summary>
         /// <param name="cpf"></param>
         /// <returns></returns>
-        private static bool IsCpf(string cpf)
+        public static bool IsCpf(string cpf)
         {
-            int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
-            int[] multiplicador2 = new int[10] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+            if (string.IsNullOrWhiteSpace(cpf))
+                return false;
 
             cpf = cpf.Trim().Replace(".", "").Replace("-", "");
 
-            if (cpf.Length != 11)
+            if (!FormatoCpf.IsMatch(cpf) || DigitosRepetidos.IsMatch(cpf))
                 return false;
 
-            for (int j = 0; j < 10; j++)
-                if (j.ToString().PadLeft(11, char.Parse(j.ToString())) == cpf)
-                    return false;
-
-            string tempCpf = cpf.Substring(0, 9);
-            int soma = 0;
-
-            for (int i = 0; i < 9; i++)
-                soma += int.Parse(tempCpf[i].ToString()) * multiplicador1[i];
-
-            int resto = soma % 11;
-            if (resto < 2)
-                resto = 0;
-            else
-                resto = 11 - resto;
-
-            string digito = resto.ToString();
-            tempCpf = tempCpf + digito;
-            soma = 0;
-            for (int i = 0; i < 10; i++)
-                soma += int.Parse(tempCpf[i].ToString()) * multiplicador2[i];
-
-            resto = soma % 11;
-            if (resto < 2)
-                resto = 0;
-            else
-                resto = 11 - resto;
-
-            digito = digito + resto.ToString();
-
-            return cpf.EndsWith(digito);
+            return cpf.EndsWith(DigitosVerificadores(cpf.Substring(0, 9), MultiplicadoresCpf1, MultiplicadoresCpf2));
         }
 
         /// <summary>
-        /// Valida se é CNPJ.
+        /// Valida se é CNPJ, numérico ou alfanumérico (IN RFB nº 2.229/2024): 12 caracteres [A-Z0-9]
+        /// seguidos de 2 dígitos verificadores. Letras minúsculas são aceitas.
         /// </summary>
         /// <param name="cnpj"></param>
         /// <returns></returns>
-        private static bool IsCnpj(string cnpj)
+        public static bool IsCnpj(string cnpj)
         {
-            var multiplicador1 = new int[] { 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
-            var multiplicador2 = new int[] { 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
-
-            cnpj = cnpj.Trim().Replace(".", "").Replace("-", "").Replace("/", "");
-            if (cnpj.Length != 14)
+            if (string.IsNullOrWhiteSpace(cnpj))
                 return false;
 
-            var tempCnpj = cnpj.Substring(0, 12);
+            cnpj = cnpj.Trim().Replace(".", "").Replace("-", "").Replace("/", "").ToUpperInvariant();
+
+            if (!FormatoCnpj.IsMatch(cnpj) || DigitosRepetidos.IsMatch(cnpj))
+                return false;
+
+            return cnpj.EndsWith(DigitosVerificadores(cnpj.Substring(0, 12), MultiplicadoresCnpj1, MultiplicadoresCnpj2));
+        }
+
+        /// <summary>
+        /// Remove a máscara do CNPJ, mantendo letras e números, e converte para maiúsculas.
+        /// </summary>
+        /// <param name="cnpj"></param>
+        /// <returns></returns>
+        public static string NormalizeCnpj(string cnpj)
+        {
+            return string.IsNullOrEmpty(cnpj) ? cnpj : new string(cnpj.Where(char.IsLetterOrDigit).ToArray()).ToUpperInvariant();
+        }
+
+        private static string DigitosVerificadores(string numero, int[] multiplicadores1, int[] multiplicadores2)
+        {
+            var primeiro = Digito(numero, multiplicadores1);
+            var segundo = Digito(numero + primeiro, multiplicadores2);
+
+            return $"{primeiro}{segundo}";
+        }
+
+        private static int Digito(string numero, int[] multiplicadores)
+        {
             var soma = 0;
 
-            for (var i = 0; i < 12; i++)
-                soma += int.Parse(tempCnpj[i].ToString()) * multiplicador1[i];
+            // Cada caractere vale o seu código ASCII menos 48 (0-9 = 0-9, A = 17 ... Z = 42)
+            for (var i = 0; i < multiplicadores.Length; i++)
+                soma += (numero[i] - '0') * multiplicadores[i];
 
-            var resto = (soma % 11);
-            
-            if (resto < 2)
-                resto = 0;
-            else
-                resto = 11 - resto;
+            var resto = soma % 11;
 
-            var digito = resto.ToString();
-            tempCnpj += digito;
-            soma = 0;
-            
-            for (var i = 0; i < 13; i++)
-                soma += int.Parse(tempCnpj[i].ToString()) * multiplicador2[i];
-
-            resto = (soma % 11);
-            
-            if (resto < 2)
-                resto = 0;
-            else
-                resto = 11 - resto;
-
-            digito += resto.ToString();
-
-            return cnpj.EndsWith(digito);
+            return resto < 2 ? 0 : 11 - resto;
         }
     }
 }

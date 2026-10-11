@@ -21,7 +21,8 @@ namespace AnzolinNetDevPack.Services
 
         public PessoaJuridica ConsultaCnpj(string cnpj)
         {
-            return ConsultaCnpjAsync(cnpj).Result;
+            // GetResult repassa a exceção original (ex.: ArgumentException), sem embrulhar em AggregateException
+            return ConsultaCnpjAsync(cnpj).GetAwaiter().GetResult();
         }
 
         public async Task<PessoaJuridica> ConsultaCnpjAsync(string cnpj)
@@ -29,8 +30,10 @@ namespace AnzolinNetDevPack.Services
             if (string.IsNullOrEmpty(cnpj))
                 throw new ArgumentNullException(nameof(cnpj));
 
-            if (!CpfCnpjValidator.IsValid(cnpj))
+            if (!CpfCnpjValidator.IsCnpj(cnpj))
                 throw new ArgumentException(ErroResources.CNPJ_INVALIDO);
+
+            cnpj = CpfCnpjValidator.NormalizeCnpj(cnpj);
 
             const string api = "https://www.receitaws.com.br/v1/cnpj/{0}";
 

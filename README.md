@@ -49,7 +49,7 @@ Also see [my NuGet Profile](https://www.nuget.org/profiles/anzolin) to find more
 Just add a dependency in your .csproj file to get the nuget:
 
 ```xml
-<PackageReference Include="AnzolinNetDevPack" Version="2.0.0" />
+<PackageReference Include="AnzolinNetDevPack" Version="2.1.0" />
 ```
 
 Or from a command prompt:
@@ -99,7 +99,8 @@ Install-Package AnzolinNetDevPack
 | **TimeHelper** | `Truncate` | **DateTimeOffset** data | Retorna a data e hora completa, sendo o tempo absoluto. |  |
 | **CpfCnpjValidator** | `IsValid` | **string** cpfCnpj | Valida o documento informado. |  |
 | **CpfCnpjValidator** | `IsCpf` | **string** cpf | Valida se é um CPF. |  |
-| **CpfCnpjValidator** | `IsCnpj` | **string** cnpj | Valida se é CNPJ. |  |
+| **CpfCnpjValidator** | `IsCnpj` | **string** cnpj | Valida se é CNPJ, numérico ou alfanumérico (IN RFB nº 2.229/2024). |  |
+| **CpfCnpjValidator** | `NormalizeCnpj` | **string** cnpj | Remove a máscara do CNPJ, mantendo letras e números, em maiúsculas. |  |
 | **EmailValidator** | `IsValidEmail` | **string** email | Valida se é um e-mail. |  |
 | **Services** | `ConsultaCnpj` | **string** cnpj | Consulta os dados da pessoa jurídica através do Cnpj informado. |  |
 | **Services** | `ConsultaCnpjAsync` | **string** cnpj | Consulta os dados da pessoa jurídica através do Cnpj informado. |  |
